@@ -1,0 +1,690 @@
+<form action="/logout?_method=DELETE" method="POST">
+  <button type="submit">Log Out</button>
+</form>
+
+<head>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <form class="login-container">
+    <input type="button" value="To auth" id="login-button" />
+  </form>
+
+  <nav id="navbar">
+    <div id="tester">
+      <div id="blackout"></div>
+      <section id="cart-wrap" onclick="blackout()">
+    <div id="cart-one" class="cart"></div>
+    <div id="cart-two" class="cart"></div>
+    <div id="cart-three" class="cart"></div>
+    <div id="cart-four" class="cart"></div>
+    <div id="cart-l-w" class="cart"></div>
+    <div id="cart-r-w" class="cart" class="child"></div>
+    <p id="counter"></p>
+    </section>
+    </div>
+      
+    <p id="stacy-logo">Stacy's</p> 
+    
+    <section id="nav-grid">
+      <p id="deals" ><a href="javascript:void(0)" onclick="alerter()">Deals</a></p>
+      <p id="trending" onclick="alerter()"><a href="javascript:void(0)">Trending</a></p>
+      <p id="school" onclick="alerter()"><a href="javascript:void(0)">Back to School</a></p>
+      <p id="kids"><a href="javascript:void(0)" onclick="alerter()">Kids</a></p>
+      <p id="electronics"><a href="javascript:void(0)" onclick="alerter()">Electronics</a></p>
+      <p id="kitchen"><a href="javascript:void(0)" onclick="alerter()">Kitchen</a></p>
+      <p id="nav-spacer">i</p>
+    </section>
+    
+     <div id="search-wrap">
+    <input type="search" id="would-be-searcher" tabindex="1" data-table="none"
+         placeholder="Search for products..."/>
+    </div>
+  </nav>
+  
+    
+    
+  <body>
+    <div id="button" onclick="hamStyle();noScroll()"> 
+      <label for="toggler" class="hamburger" onclick="btnAuth();noScroll">
+      <div id="top-line" class="ham-lines" onclick="btnAuth();noScroll"></div>
+      <div id="middle-line" class="ham-lines" onclick="btnAuth();noScroll"></div>
+      <div id="bottom-line" class="ham-lines" onclick="btnAuth();noScroll"></div> 
+        </label>
+    </div> 
+    
+    
+    <div id="ham-list-wrap">
+      <ul id="ham-list">
+        <li><a href="javascript:void(0)">Home</a></li>
+        <li onclick="alerter()"><a href="javascript:void(0)"><%= user.name %>'s Profile</a></li>
+        <li onclick="alerter()"><a href="javascript:void(0)">Store Locater</a></li>
+        <!--Divider line-->
+        <h2 class="htwo-line">Departments</h2>
+        <li onclick="alerter()"><a href="javascript:void(0)">Men</a></li>
+        <li onclick="alerter()"><a href="javascript:void(0)">Women</a></li>
+        <li onclick="alerter()"><a href="javascript:void(0)">Home Goods</a></li>
+        <li onclick="alerter()"><a href="javascript:void(0)">Accessories</a></li>
+        <li onclick="alerter()"><a href="javascript:void(0)">More departments</a></li>
+        <!--Divider line-->
+        <h2 class="htwo-line">More Options</h2>
+        <li onclick="alerter()"><a href="javascript:void(0)">About us</a></li>
+        <li onclick="alerter()"><a href="javascript:void(0)">Careers</a></li>
+        <li onclick="alerter()"><a href="javascript:void(0)">Contact Us</a></li>
+        <a href="/logout"><li><p>Log Out</p></li></a>
+      </ul>
+
+    </div>
+    </div>
+    
+    <div><img id="top-picture" src="https://images.pexels.com/photos/4259140/pexels-photo-4259140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/></div>
+    <p id="top-picture-p">Shop where you're part of the family ~ Stacy's</p>
+    
+    <h2 id="new-p-words">New products for you</h2>
+   
+    <div id="new-products">
+      <a href="javascript:void(0)" onclick="opener();deleteInner();createShirts();btnAuth();noScroll();"><p class="new-p"><img src="https://images.pexels.com/photos/1030946/pexels-photo-1030946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/></p><div class="second-p-wrap"><p id="second-p-one">$29.99<br>3 For 1 Shirts</p></div></a> 
+      <a href="javascript:void(0)" onclick="opener();deleteInner();createGloves();btnAuth();noScroll();"><p class="new-p"><img src="https://images.pexels.com/photos/63448/pexels-photo-63448.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/></p><div class="second-p-wrap"><p id="second-p-two">$4.99<br>Outdoor Gloves</p></div></a>
+      <a href="javascript:void(0)" onclick="opener();deleteInner();createAlexa();btnAuth();noScroll();"><p class="new-p"><img src="https://images.pexels.com/photos/4790268/pexels-photo-4790268.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/></p><div class="second-p-wrap"><p id="second-p-three">$299.99<br>Alexa Virtual Assistant</p></div></a>
+      <a href="javascript:void(0)" onclick="opener();deleteInner();createDining();btnAuth();noScroll();"><p class="new-p"><img src="https://images.pexels.com/photos/4846106/pexels-photo-4846106.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/></p><div class="second-p-wrap"><p id="second-p-four">$269.99<br>Full Dining Room Set</p></div></a>
+      <a href="javascript:void(0)" onclick="opener();deleteInner();createHat();btnAuth();noScroll();"><p class="new-p"><img src="https://images.pexels.com/photos/2832037/pexels-photo-2832037.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/></p><div class="second-p-wrap"><p id="second-p-five">$34.99<br>Classical Outdoors Hat</p></div></a>
+       <a href="javascript:void(0)" onclick="opener();deleteInner();createAir();btnAuth();noScroll();"><p class="new-p"><img src="https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/></p><div class="second-p-wrap"><p id="second-p-six">$79.99<br>Wireless Airpods</p></div></a>
+       <a href="javascript:void(0)" onclick="opener();deleteInner();createGown();btnAuth();noScroll();"><p class="new-p"><img src="https://images.pexels.com/photos/4374417/pexels-photo-4374417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/></p><div class="second-p-wrap"><p id="second-p-seven">119.99<br>Bridesmaid's Gown</p></div></a>
+       <p id="new-p-space" class="new-p">i</p>
+    </div>
+    
+    
+    <h2 id="savings">Limited time savings</h2>
+    <div id="savings-sect">
+  <div id="savings-one" onclick="opener();deleteInner();createCamera();btnAuth();noScroll();"><div id="one-off"><p id="percentage-one">35% Off</p></div></div>
+  <div id="savings-two" onclick="opener();deleteInner();createDrone();btnAuth();noScroll();";><div id="two-off"><p id="percentage-two">40% Off</p></div></div>
+    </div>
+    <a href="javascript:void(0)" onclick="opener();deleteInner();createCamera();btnAuth();noScroll();";><p id="one-off-name">$179.99<br>Wildlife Camera</p></a>
+    <a href="javascript:void(0)"><p id="two-off-name" onclick="opener();deleteInner();createDrone();btnAuth();noScroll();">$54.99<br>Battery Powered Drone</p></a> 
+   
+   
+    
+    
+    
+    
+      
+     
+    <div id="popup"> 
+      <div id="cross-container" onclick="closer();btnAuth();noScroll();">
+        <div id="line-one" onclick="closer()"></div>
+        <div id="line-two" onclick="closer()"></div>
+      </div> 
+      <div id="new-div"></div>
+      <div id="cart-add"></div>
+      <div id="another-div"></div>
+      <div id="name-div"></div> 
+    </div> 
+     
+  <div id="container-wrap">
+    <h2 id="list-total"></h2>
+    <div id="container">
+      
+  <ul id="the-ul"> 
+  </ul>
+      
+  </div>
+  </div>
+  </body>
+  
+  <footer> 
+    <a href="#navbar"><p id="footer-top">Top of page</p></a>
+    <p id="right-footer"><a href="javascript:void(0)" onclick="deleteInner">Home</a><br><br><a href="javascript:void(0)"><a href="javascript:void(0)" onclick="alerter()">Store Locater</a></p>
+    <p id="left-footer"><a href="javascript:void(0)" onclick="alerter()">Account</a><br><br><a href="javascript:void(0)" onclick="alerter()">Contact</a></p>
+  </footer> 
+
+
+
+
+
+  <script>
+    const button = document.getElementById("enter");
+
+const input = document.getElementById("item-input");
+
+const theUl = document.getElementById("the-ul");
+
+const thePrice = document.getElementById('price-ul');
+
+
+
+window.onload = listTotal();
+
+
+
+//Searchbar event listener
+document.getElementById('would-be-searcher').addEventListener("keypress", function() {
+	if(event.keyCode === 13) {
+  alerter();
+}});
+//End of searchbar event listener
+
+
+
+//Toggle #blackout visibility
+function blackout() {
+  if(document.getElementById('container-wrap').style.visibility != 'visible') {
+  document.getElementById('container-wrap').style.visibility = 'visible';
+} else {
+  document.getElementById('container-wrap').style.visibility = 'hidden';
+}
+  listTotal();
+}
+//End of toggle #blackout visibility
+
+
+
+//Calculate total cart price
+function listTotal() {
+const listItems = [].slice.call(document.querySelectorAll('#the-ul li div'))
+
+const sum = listItems.reduce(function(sum, el) {
+	return sum + parseFloat(el.innerText)
+}, 0);
+  
+  console.log(sum);
+
+document.getElementById('list-total').textContent = 'Total: $' + (Math.round(sum * 100) / 100);
+}
+//End of calculate total cart price
+
+
+
+//Declare unmade webpages
+function alerter() {
+  alert("(503) Page Unavailable\nNot Created");
+}
+//End of declare unmade webpages
+
+
+
+//Stop page scrolling
+function noScroll() {
+  const theBody = document.body;
+ if(document.querySelector('#blackout').style.visibility == 'hidden') {
+   
+
+   theBody.style.overflow = "auto";
+   theBody.style.overflowX ="hidden";
+   
+} else {
+   if(document.querySelector('#blackout').style.visibility == 'visible') {
+
+     theBody.style.overflow = "hidden";
+}
+}
+}
+//End of stop page scrolling
+
+
+
+//Toggle #popup visibility
+function closer() {  document.getElementById("popup").style.visibility = "hidden";
+}
+
+function opener() { document.getElementById("popup").style.visibility = "visible";
+}
+//End of toggle popup visibility
+
+
+
+//Update #counter count
+function updateCount() {
+      var items = document.querySelectorAll('ul#the-ul li').length;
+      document.querySelector('#counter').textContent = items;
+    }
+    updateCount();
+//End of update #counter count
+
+
+
+//Change appearance of ham button
+function hamStyle() {
+   let x = document.getElementById("ham-list-wrap");
+  if (x.style.visibility === "visible") {
+    x.style.visibility = "hidden";
+    
+document.getElementById('blackout').style.visibility ="hidden";   
+    
+    document.querySelector('#top-line').style.cssText = 
+  'transform: rotate(0deg);top: 0.1em;position: absolute;';
+
+   document.querySelector('#bottom-line').style.cssText = 
+  'top: 1.4em';
+   document.querySelector('#middle-line').style.cssText = 
+  'visibility: visible;';
+   document.querySelector('#button').style.cssText = 'top: 1.5em;';
+    
+  } else {
+    x.style.visibility = "visible";
+   document.getElementById('blackout').style.visibility ="visible";  
+    
+    document.querySelector('#top-line').style.cssText = 
+  'transform: rotate(45deg);top: 2.4em;left: 19em;position: fixed;';
+    
+   document.querySelector('#bottom-line').style.cssText = 
+  'transform: rotate(-45deg);top: 2.4em;left: 19em;position: fixed;';
+    
+   document.querySelector('#middle-line').style.cssText = 
+  'visibility: hidden;';
+     document.querySelector('#button').style.cssText = 
+  'position: fixed;left: 19em;';
+  }
+}
+//End of change appearance of ham button
+
+
+
+//Change auth to click ham button
+function btnAuth() {
+    let x = document.querySelector('#blackout');
+  if(x.style.visibility !== 'visible') {
+    x.style.visibility = 'visible';
+     document.getElementById('button').style.pointerEvents = 'none';
+     document.getElementById('button').style.opacity = '20%';
+    
+  } else {
+      x.style.visibility = 'hidden';
+      document.getElementById('button').style.pointerEvents = 'auto';
+     document.getElementById('button').style.opacity = '100%'; 
+  }
+}
+//End of change auth to click ham button
+
+
+
+//Delete old #popup info
+function deleteInner() {
+document.getElementById('new-div').innerHTML = '';
+  
+  document.getElementById('cart-add').innerHTML = '';
+  
+  document.getElementById('another-div').innerHTML = '';
+  
+  document.getElementById('name-div').innerHTML = '';
+}
+//End of delete old popup info
+
+
+
+//Change #popup
+function createShirts() {
+document.getElementById("new-div").textContent ='$29.99';
+
+document.getElementById("name-div").textContent ='3 For 1 Shirts';
+  
+let anotherDiv = document.createElement('img');
+  anotherDiv.id="another-div";
+  anotherDiv.src='https://images.pexels.com/photos/1030946/pexels-photo-1030946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500';
+  document.getElementById('another-div').appendChild(anotherDiv);
+  
+  let newP = document.createElement("p");
+   newP.id = "cart-add";
+   newP.addEventListener("click", function() { 
+  alert("Added to cart!");
+     
+     		let newItem = document.createElement("li");
+     
+     let divPrice = document.createElement("div");
+     divPrice.className = 'div-price';
+		    newItem.appendChild(document.createTextNode("3 For 1 Shirts"));
+     divPrice.appendChild(document.createTextNode("29.99"));
+     
+     newItem.appendChild(divPrice);
+         
+     let dlt = document.createElement('p');
+     dlt.className = 'dlt-button';
+     dlt.onclick = function() { this.parentNode.remove(); listTotal(); updateCount(); };
+     dlt.appendChild(document.createTextNode("X"));
+     
+     newItem.appendChild(dlt);
+     
+		theUl.appendChild(newItem);      
+     
+  listTotal();
+  updateCount();
+});
+newP.appendChild(document.createTextNode('\u00A0 Add To Cart \u00A0'));
+   document.getElementById('popup').appendChild(newP);
+}
+
+
+function createGloves() {
+document.getElementById("new-div").textContent ='$4.99';
+
+document.getElementById("name-div").textContent ='Outdoor Gloves';
+  
+let anotherDiv = document.createElement('img');
+  anotherDiv.id="another-div";
+  anotherDiv.src='https://images.pexels.com/photos/63448/pexels-photo-63448.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940';
+  document.getElementById('another-div').appendChild(anotherDiv);
+  
+  let newP = document.createElement("p");
+   newP.id = "cart-add";
+   newP.addEventListener("click", function() { 
+       alert("Added to cart!");
+     
+     		let newItem = document.createElement("li");
+     
+     let divPrice = document.createElement("div");
+     divPrice.className = 'div-price';
+     divPrice.appendChild(document.createTextNode("4.99"));
+     
+     newItem.appendChild(divPrice);
+		    newItem.appendChild(document.createTextNode("Outdoor Gloves"));
+		theUl.appendChild(newItem);
+     
+     let dlt = document.createElement('p');
+     dlt.className = 'dlt-button';
+     dlt.onclick = function() { this.parentNode.remove(); listTotal(); updateCount(); };
+     dlt.appendChild(document.createTextNode("X"));
+     
+     newItem.appendChild(dlt);
+     
+		theUl.appendChild(newItem);   
+     
+  listTotal();   
+  updateCount();
+});
+newP.appendChild(document.createTextNode('\u00A0 Add To Cart \u00A0'));
+   document.getElementById('popup').appendChild(newP);
+}
+
+function createAlexa() {
+document.getElementById("new-div").textContent = '$299.99';
+
+document.getElementById("name-div").textContent ='Alexa Virtual Assistant';
+  
+let anotherDiv = document.createElement('img');
+  anotherDiv.id="another-div";
+  anotherDiv.src='https://images.pexels.com/photos/4790268/pexels-photo-4790268.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500';
+  document.getElementById('another-div').appendChild(anotherDiv);
+  
+  let newP = document.createElement("p");
+   newP.id = "cart-add";
+   newP.addEventListener("click", function() { 
+       alert("Added to cart!");
+     
+     		let newItem = document.createElement("li");
+     
+     let divPrice = document.createElement("div");
+     divPrice.className = 'div-price';
+     
+divPrice.appendChild(document.createTextNode("299.99"));
+     
+     newItem.appendChild(divPrice);
+		    newItem.appendChild(document.createTextNode("Alexa Virtual Assistant"));
+		theUl.appendChild(newItem);
+     
+     let dlt = document.createElement('p');
+     
+     dlt.className = 'dlt-button';
+     dlt.onclick = function() { this.parentNode.remove(); listTotal(); updateCount(); };
+     dlt.appendChild(document.createTextNode("X"));
+     
+     newItem.appendChild(dlt);
+     
+		theUl.appendChild(newItem);
+
+  listTotal();   
+  updateCount();
+});
+newP.appendChild(document.createTextNode('\u00A0 Add To Cart \u00A0'));
+   document.getElementById('popup').appendChild(newP);
+}
+
+function createDining() {
+document.getElementById("new-div").textContent = '$269.99';
+
+document.getElementById("name-div").textContent ='Full Dining Room set';
+  
+let anotherDiv = document.createElement('img');
+  anotherDiv.id="another-div";
+  anotherDiv.src='https://images.pexels.com/photos/4846106/pexels-photo-4846106.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500';
+  document.getElementById('another-div').appendChild(anotherDiv);
+  
+  let newP = document.createElement("p");
+   newP.id = "cart-add";
+   newP.addEventListener("click", function() { 
+       alert("Added to cart!");
+     
+     		let newItem = document.createElement("li");
+     
+     let divPrice = document.createElement("div");
+     divPrice.className = 'div-price';    
+     divPrice.appendChild(document.createTextNode("269.99"));
+     
+     newItem.appendChild(divPrice);
+		    newItem.appendChild(document.createTextNode("Full Dining Room Set"));
+		theUl.appendChild(newItem);
+     
+     let dlt = document.createElement('p');
+     dlt.className = 'dlt-button';
+     dlt.onclick = function() { this.parentNode.remove(); listTotal(); updateCount(); };
+     dlt.appendChild(document.createTextNode("X"));
+     
+     newItem.appendChild(dlt);
+
+		theUl.appendChild(newItem);   
+     
+  listTotal();   
+  updateCount();
+});
+newP.appendChild(document.createTextNode('\u00A0 Add To Cart \u00A0'));
+   document.getElementById('popup').appendChild(newP);
+}
+
+function createHat() {
+document.getElementById("new-div").textContent = '$34.99';
+
+document.getElementById("name-div").textContent ='Classical Outdoors Hat';
+
+let anotherDiv = document.createElement('img');
+  anotherDiv.id="another-div";
+  anotherDiv.src='https://images.pexels.com/photos/2832037/pexels-photo-2832037.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500';
+  document.getElementById('another-div').appendChild(anotherDiv);
+  
+  let newP = document.createElement("p");
+   newP.id = "cart-add";
+   newP.addEventListener("click", function() { 
+       alert("Added to cart!");
+     
+     		let newItem = document.createElement("li");
+     
+     let divPrice = document.createElement("div");
+     divPrice.className = 'div-price';
+         divPrice.appendChild(document.createTextNode("34.99"));
+     
+     newItem.appendChild(divPrice);
+		    newItem.appendChild(document.createTextNode("Classical Outdoors Hat"));
+		theUl.appendChild(newItem);
+       
+     let dlt = document.createElement('p');
+     dlt.className = 'dlt-button';
+     dlt.onclick = function() { this.parentNode.remove(); listTotal(); updateCount(); };
+     dlt.appendChild(document.createTextNode("X"));
+     
+     newItem.appendChild(dlt);
+
+		theUl.appendChild(newItem);
+     
+  listTotal();   
+  updateCount();
+});
+newP.appendChild(document.createTextNode('\u00A0 Add To Cart \u00A0'));
+   document.getElementById('popup').appendChild(newP);
+}
+
+function createAir() {
+document.getElementById("new-div").textContent = '$79.99';
+
+document.getElementById("name-div").textContent ='Wireless Airpods';
+  
+let anotherDiv = document.createElement('img');
+  anotherDiv.id="another-div";
+  anotherDiv.src='https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500';
+  document.getElementById('another-div').appendChild(anotherDiv);
+  
+  let newP = document.createElement("p");
+   newP.id = "cart-add";
+   newP.addEventListener("click", function() { 
+       alert("Added to cart!");
+     		let newItem = document.createElement("li");
+     
+     let divPrice = document.createElement("div");
+     divPrice.className = 'div-price';    
+     divPrice.appendChild(document.createTextNode("79.99"));
+     
+     newItem.appendChild(divPrice);
+		    newItem.appendChild(document.createTextNode("Wireless Airpods"));
+		theUl.appendChild(newItem);
+     
+     let dlt = document.createElement('p');
+     dlt.className = 'dlt-button';
+     dlt.onclick = function() { this.parentNode.remove(); listTotal(); updateCount(); };
+     dlt.appendChild(document.createTextNode("X"));
+     
+     newItem.appendChild(dlt);
+     
+		theUl.appendChild(newItem);
+     
+  listTotal();   
+  updateCount();
+});
+newP.appendChild(document.createTextNode('\u00A0 Add To Cart \u00A0'));
+   document.getElementById('popup').appendChild(newP);
+}
+
+function createGown() {
+document.getElementById("new-div").textContent = '$119.99';
+
+document.getElementById("name-div").textContent ='Bridesmaid\'s Gown';
+  
+let anotherDiv = document.createElement('img');
+  anotherDiv.id="another-div";
+  anotherDiv.src='https://images.pexels.com/photos/4374417/pexels-photo-4374417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940';
+  document.getElementById('another-div').appendChild(anotherDiv);
+  
+  let newP = document.createElement("p");
+   newP.id = "cart-add";
+   newP.addEventListener("click", function() { 
+       alert("Added to cart!");
+     
+     		let newItem = document.createElement("li");
+     
+     let divPrice = document.createElement("div");
+     divPrice.className = 'div-price';
+     
+     divPrice.appendChild(document.createTextNode("119.99"));
+     
+     newItem.appendChild(divPrice);
+		    newItem.appendChild(document.createTextNode("Bridesmaid's Gown"));
+		theUl.appendChild(newItem);
+     
+     let dlt = document.createElement('p');
+     dlt.className = 'dlt-button';
+     dlt.onclick = function() { this.parentNode.remove(); listTotal(); updateCount(); };
+     dlt.appendChild(document.createTextNode("X"));
+     
+     newItem.appendChild(dlt);
+     
+		theUl.appendChild(newItem);
+  
+  listTotal();   
+  updateCount();
+});
+newP.appendChild(document.createTextNode('\u00A0 Add To Cart \u00A0'));
+   document.getElementById('popup').appendChild(newP);
+}
+
+function createCamera() {
+document.getElementById("new-div").textContent = '$179.99';
+
+document.getElementById("name-div").textContent ='Wildlife Camera';
+  
+let anotherDiv = document.createElement('img');
+  anotherDiv.id="another-div";
+  anotherDiv.src='https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940';
+  document.getElementById('another-div').appendChild(anotherDiv);
+  
+  let newP = document.createElement("p");
+   newP.id = "cart-add";
+   newP.addEventListener("click", function() { 
+       alert("Added to cart!");
+     
+     		let newItem = document.createElement("li");
+     
+     let divPrice = document.createElement("div");
+     divPrice.className = 'div-price';
+     
+     divPrice.appendChild(document.createTextNode("179.99"));
+     
+     newItem.appendChild(divPrice);
+		    newItem.appendChild(document.createTextNode("Wildlife Camera"));
+		theUl.appendChild(newItem);
+     
+     let dlt = document.createElement('p');
+     dlt.className = 'dlt-button';
+     dlt.onclick = function() { this.parentNode.remove(); listTotal(); updateCount(); };
+     dlt.appendChild(document.createTextNode("X"));
+     
+     newItem.appendChild(dlt);
+     
+		theUl.appendChild(newItem);  
+     
+  listTotal();   
+  updateCount();
+});
+newP.appendChild(document.createTextNode('\u00A0 Add To Cart \u00A0'));
+   document.getElementById('popup').appendChild(newP);
+}
+
+
+function createDrone() {
+document.getElementById("new-div").textContent ='$54.99';
+
+document.getElementById("name-div").textContent ='Battery Powered Drone';
+  
+let anotherDiv = document.createElement('img');
+  anotherDiv.id="another-div";
+  anotherDiv.src='https://images.pexels.com/photos/1087180/pexels-photo-1087180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940';
+  document.getElementById('another-div').appendChild(anotherDiv);
+  
+  let newP = document.createElement("p");
+   newP.id = "cart-add";
+   newP.addEventListener("click", function() { 
+       alert("Added to cart!");
+     
+     		let newItem = document.createElement("li");
+     
+     let divPrice = document.createElement("div");
+     divPrice.className = 'div-price';
+     divPrice.appendChild(document.createTextNode("54.99"));
+     
+     newItem.appendChild(divPrice);
+		    newItem.appendChild(document.createTextNode("Battery Powered Drone"));
+		theUl.appendChild(newItem);     
+     
+     let dlt = document.createElement('p');
+     dlt.className = 'dlt-button';
+     dlt.onclick = function() { this.parentNode.remove(); listTotal(); updateCount(); };
+     dlt.appendChild(document.createTextNode("X"));
+     
+     newItem.appendChild(dlt);
+     
+		theUl.appendChild(newItem);
+     
+  listTotal();   
+  updateCount();
+});
+
+newP.appendChild(document.createTextNode('\u00A0 Add To Cart \u00A0'));
+   document.getElementById('popup').appendChild(newP);
+}
+//End of change #popup
+  </script>
